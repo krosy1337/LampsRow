@@ -135,6 +135,7 @@ body {
 
 .input {
   margin: 100px auto 0 auto;
+  margin-top: 100px;
   max-width: 350px;
 }
 
@@ -142,9 +143,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 10px;
 }
 
@@ -153,10 +158,11 @@ body {
   padding: 10px;
   font-size: 18px;
   border-radius: 5px;
+  margin: 5px 0;
 }
 
 .input__button {
-  padding: 5px 20px;
+  padding: 10px 20px;
   background-color: #2f6899;
   color: #fff;
   font-size: 18px;
@@ -166,6 +172,39 @@ body {
 
 .input__text {
   font-size: 18px;
+  display: block;
+}
+
+.input__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+}
+
+.input__control-button {
+  background-color: #4e525f;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: 1px solid #3c4548;
 }
 
 @media (max-width: 1200px) {
@@ -187,5 +226,9 @@ body {
 
   .lamps-row__element {
     height: calc(60px + 120 * ((100vw - 320px) / 880));
+  }
+
+  .input {
+    margin-top: calc(30px + 70 * ((100vw - 320px) / 880));
   }
 }
